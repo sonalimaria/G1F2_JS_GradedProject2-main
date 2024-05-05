@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    /* Reset default margin */
+}
+
+.login-container {
+    background: yellow;
+    /* Change to desired background color */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    /* Set a fixed width */
+}
+
+h1 {
+    background: black;
+    /* Color for the bar */
+    color: white;
+    /* Color for text */
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+    /* To extend the bar to the edges */
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Rounded borders for inputs */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Rounded borders for button */
+}
+
+button:hover {
+    opacity: 0.8;
+}

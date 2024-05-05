@@ -1,0 +1,296 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* Viewport height */
+    overflow: hidden;
+    /* No scrolling on the body itself */
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* Full viewport height */
+    width: auto;
+    align-items: center;
+    /* Center content */
+    font-family: Arial, sans-serif;
+}
+
+.actions-container {
+    width: 100%;
+    background-color: rgba(0, 0, 50, 0.8);
+    /* Slightly transparent dark blue */
+    padding: 5px;
+    position: fixed;
+    /* Fixed at the top */
+    top: 0;
+    left: 0;
+    display: flex;
+    /* Establishes this container as a flex container */
+    justify-content: center;
+    /* justify-content: center; */
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    z-index: 100;
+    /* Above other content */
+}
+
+.details-container {
+    margin-top: 50px;
+    /* Space for the fixed actions container */
+    height: calc(100vh - 50px);
+    /* Adjust height based on the actions container */
+    overflow: hidden;
+    /* No overflow */
+}
+
+.small-btns {
+
+    padding: 5px 10px;
+    background-color: #444;
+    /* Dark gray for buttons */
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    margin: 5px;
+    /* Margin around buttons to separate them */
+    width: 120px;
+    /* Fixed width to match the size of 'Previous' */
+    text-align: center;
+    /* Ensure text is centered within the button */
+}
+
+.search-input {
+    width: 5cm;
+    /* Sets the width of the search input to 5 centimeters */
+    padding: 5px;
+    /* Keeps the padding for better visual appearance */
+    margin: 8px 10px;
+    /* margin: 0 10px; */
+    /* Spacing around the search box */
+    border-radius: 5px;
+    /* Rounded corners for the input box */
+    background-color: white;
+    /* Ensures the input box is visibly distinct */
+    color: black;
+    /* Text color for the input */
+}
+
+.resume-container {
+    width: 100%;
+    /* Use the full width available */
+    max-width: 800px;
+    /* Limit the maximum width to suit smaller screens like 14" */
+    margin: auto;
+    /* Center the container */
+    overflow: hidden;
+    /* Hide overflow */
+    padding: 10px;
+    /* Padding for aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Optional: for better visibility */
+    color: #333;
+    /* Dark text color for readability */
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #D1F6F0;
+    /* Light background for visibility */
+    padding: 2px;
+    position: sticky;
+    /* Sticky position at the top of details-container */
+    top: 0;
+    /* Stick to the top */
+    z-index: 10;
+    /* Ensure it's above the body content */
+}
+
+.header-left {
+    flex: 1;
+    /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    /* Center-align items within the left block */
+}
+
+.header-right {
+    flex: 0 0 auto;
+    /* Do not grow or shrink, use auto width based on content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+.candidate-image {
+    margin-top: 7px;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    border: 2px solid white;
+}
+
+.resume-body {
+    display: flex;
+    width: 100%;
+    /* Full width of the container */
+    height: calc(100vh - 110px);
+    /* Adjust based on total available height */
+    overflow-y: auto;
+    /* Allow scrolling within the body */
+    padding: 10px;
+    /* background-color: #f1f1f1;  */
+    /* Different background for distinction */
+}
+
+.left-section {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: white;
+    /* Default background color for the entire left section */
+}
+
+.content-background {
+    background-color: lightpink;
+    /* Light pink background only for the content up to hobbies */
+    padding: 10px;
+}
+
+.personal-info,
+.tech-skill,
+.hobbies-section {
+    margin-bottom: 10px;
+    /* Adds space between sections */
+}
+
+.right-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    overflow-y: auto;
+    /* Allow vertical scrolling */
+    max-height: 80%;
+    /* max-height: calc(100vh - 110px - 20px - 20px - 20px ); */
+    /* Adjust this value based on actual header and padding/margin sizes */
+}
+
+.titles {
+    background-color: lightgrey;
+    color: black;
+    font-size: 9pt;
+    padding: 1px;
+    margin: 5px 0;
+}
+
+#phone,
+#email,
+#linkedin,
+#technicalSkills,
+#hobbies,
+#previousCompanyDetails,
+#projectDetails {
+    margin-top: 0;
+    font-size: 8pt
+}
+
+.other-details h2 {
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
+.right-align {
+    text-align: right;
+    list-style-type: none;
+    /* Remove default bullet points */
+    margin-top: 0;
+    /* Adjust top margin */
+    margin-bottom: 0;
+    /* Adjust bottom margin */
+}
+
+#previousCompanyDetails,
+#projectDetails {
+    padding-left: 20px;
+    /* Adjust the desired indentation */
+}
+
+#education,
+#internship,
+#achievements {
+    padding: 10px;
+    list-style-type: disc;
+    /* Set bullet style */
+    margin-top: 0;
+    font-size: 8pt
+}
+
+@media (max-width: 700px) {
+
+    .container,
+    .actions-container,
+    .details-container {
+        flex-direction: column;
+    }
+
+    .small-btns,
+    .search-input {
+        width: auto;
+    }
+
+    .resume-container {
+        flex-direction: column;
+    }
+
+    .actions-container {
+        padding: 5px;
+        z-index: 102;
+    }
+
+    .resume-header {
+        position: sticky;
+        top: 0;
+        width: 95%;
+        z-index: 103;
+        background-color: #D1F6F0;
+    }
+
+    .details-container {
+        margin-top: 135px;
+        z-index: 1;
+    }
+
+    .resume-body {
+        padding-top: 20px;
+    }
+
+    .left-section {
+        z-index: 1;
+        width: 40%;
+    }
+
+    .right-section {
+        width: 50%;
+        max-height: 60%;
+        overflow-y: auto;
+    }
+
+    .other-details {
+        width: 90%;
+    }
+}
